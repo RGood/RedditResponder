@@ -17,7 +17,7 @@ class AutoFunctions:
 		contribs = self.sr.get_contributors(limit=None)
 		self.c_names = []
 		for c in contribs:
-			self.c_names.append(c.name)
+			self.c_names.append(c.name.lower)
 
 	def enlist(self,user):
 		if(self.is_contrib(user)):
@@ -27,7 +27,7 @@ class AutoFunctions:
 			return False
 
 	def is_contrib(self,user):
-		if(user in self.c_names):
+		if(user.lower in self.c_names):
 			return True
 		else:
 			return False
