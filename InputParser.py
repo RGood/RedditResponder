@@ -21,5 +21,7 @@ class InputParser:
 					return 'Welcome aboard'
 				else:
 					return 'Application denied'
+		elif(args[0]=='k'):
+			return self.af.k()
 		else:
-			return "Command not recognized"
+			return 'Command not recognized'

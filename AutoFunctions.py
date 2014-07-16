@@ -34,3 +34,7 @@ class AutoFunctions:
 			return True
 		else:
 			return False
+
+	def k(self):
+		text = "    kkkkkkkkkkkkkkk    \n    kk   kkkkk   kk    \n    kk   kkkk   kkk    \n    kk   kkk   kkkk    \n    kk   kk   kkkkk    \n    kk   k   kkkkkk    \n    kk      kkkkkkk    \n    kk   k   kkkkkk    \n    kk   kk   kkkkk    \n    kk   kkk   kkkk    \n    kk   kkkk   kkk    \n    kkkkkkkkkkkkkkk"
+		return text
