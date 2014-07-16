@@ -5,10 +5,13 @@ class AutoFunctions:
 	sr = None
 	c_names = None
 
-	def __init__(self,subreddit):
+	def __init__(self,subreddit,r=None):
 		#Create Reddit Client and login
-		self.r = praw.Reddit("AutoResponder")
-		self.r.login()
+		if(r==None):
+			self.r = praw.Reddit("AutoResponder")
+			self.r.login()
+		else:
+			self.r = r
 
 		#Create object pointing to the subreddit this is for
 		self.sr = self.r.get_subreddit(subreddit)
