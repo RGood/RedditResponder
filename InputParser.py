@@ -20,7 +20,7 @@ class InputParser:
 				if(result):
 					return 'Welcome aboard'
 				else:
-					return 'Application denied'
+					return 'Ranks are reserved for members of /r/CenturyClub'
 		elif(args[0].lower()==('set:')):
 			if('to:' in args or 'To:' in args or 'TO:' in args or 'tO:' in args):
 				return self.af.set_custom(args)
