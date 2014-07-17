@@ -21,8 +21,6 @@ class InputParser:
 					return 'Welcome aboard'
 				else:
 					return 'Application denied'
-		elif(args[0].lower()==('k')):
-			return self.af.k()
 		elif(args[0].lower()==('set:')):
 			if('to:' in args or 'To:' in args or 'TO:' in args or 'tO:' in args):
 				return self.af.set_custom(args)
