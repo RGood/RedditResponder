@@ -1,3 +1,3 @@
-AskReddit
-Depression
-SuicideWatch
+askreddit
+depression
+suicidewatch

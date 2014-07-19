@@ -41,11 +41,13 @@ def exec_commands():
 			command = (c.body + ' ' + c.author.name.lower()).split(' ')
 			print(command)
 			try:
+				if(command[1].find('/r/')==0):
+					command[1] = command[1][3:]
 				sub = r.get_subreddit(command[1])
 				mod = r.get_redditor(command[2])
 				if(mod in sub.get_moderators() and sub.display_name.lower() not in restricted):
 					restricted.append(sub.display_name.lower())
-				c.reply('This bot will no longer post in ' + sub.display_name + post_script)
+				c.reply('This bot will no longer post in /r/' + sub.display_name + post_script)
 			except:
 				c.reply('That subreddit is already private and cannot be accessed' + post_script)
 			
