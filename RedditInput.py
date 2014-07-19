@@ -13,19 +13,19 @@ attentionCommand = 'hey_bucket:'
 kill_command = u'shutdown auth=8675309' #Hardcoded kill command
 
 bot_admins = [] #Initialize list of people with kill-permission
-file = open('bot_admins.txt','r')
+file = open('data/bot_admins.txt','r')
 for line in file:
 	bot_admins+=[line.strip()]
 file.close()
 
 restricted = [] #Initialize list of restricted subs
-rs = open('restricted_subs.txt','r')
+rs = open('data/restricted_subs.txt','r')
 for line in rs:
 	restricted+=[line.lower().strip()]
 rs.close()
 
 post_script = u'' #Initialize bot post-script
-ps = open('post_script.txt','r')
+ps = open('data/post_script.txt','r')
 for line in ps:
 	post_script += line
 ps.close()
@@ -88,7 +88,7 @@ while(flag):
 
 print('Bot shutting down...')
 
-rs = open('restricted_subs.txt','w')
+rs = open('data/restricted_subs.txt','w')
 for r in restricted:
 	rs.write(r+'\n')
 rs.close()
